@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="C:/Users/LR/Pictures/picico.ico">
+
+    <title>Send a timemail</title>
+
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="C:/xampp/htdocs/bootstrap/docs/examples/timemail/timemail.html"><font color="gold">Home</font></a></li>
+            <li role="presentation" class="active"><a href="C:/xampp/htdocs/bootstrap/docs/examples/timemail/about.html"><font color="gold">About</font></a></li>
+            <li role="presentation"><a href="C:/xampp/htdocs/bootstrap/docs/examples/timemail/contact.html"><font color="gold">Contact</font></a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted"><font face="serif" size="6" color="gold"><i>Timemail</i></font></h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1><font color="gold">What can you do with this website?</font></h1>
+        <p class="lead">It doesn`t really matter out of which purpose you would like to send a timemail. All that matters is the great possibilities you get. You can remind whoever you want of something. You can send yourself and others a message from the past and way more. Just try it, it`s free!
+        <img src="C:/xampp/htdocs/bootstrap/docs/examples/timemail/images/about.jpg" class="img-responsive" alt="Responsives Bild"> </p>
+      </div> 
+
+      <footer class="footer">
+         <font color="gold"><p>&copy;<font color="gold"> Timemail 2015</font></p>
+      </footer>
+
+    </div>
+
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+  <style type="text/css">
+      html, body {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      #full-screen-background-image {
+        z-index: -999;
+        min-height: 100%;
+        min-width: 1024px;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+
+      #wrapper {
+        position: relative;
+        width: 800px;
+        min-height: 400px;
+        margin: 100px auto;
+        color: #333;
+      }
+
+      a:link, a:visited, a:hover {
+        color: #333;
+        font-style: italic;
+      }
+
+      a.to-top:link,
+      a.to-top:visited, 
+      a.to-top:hover {
+        margin-top: 1000px;
+        display: block;
+        font-weight: bold;
+        padding-bottom: 30px;
+        font-size: 30px;
+      }
+
+    </style>
+    <body>
+  <img src="C:\xampp\htdocs\bootstrap\docs\examples\timemail\images/background.jpg" id="full-screen-background-image" /> 
+  <div id="wrapper">
+  </div>
+</html>
