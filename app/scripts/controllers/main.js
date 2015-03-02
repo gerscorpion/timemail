@@ -9,6 +9,7 @@
  */
 angular.module('timemailApp')
   .controller('MainCtrl', function ($scope) {
+    console.log('ctrl ok');
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
