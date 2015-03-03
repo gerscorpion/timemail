@@ -21,20 +21,20 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
+    <div class="container" ng-controller="MainCtrl">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ui-sref="home">Home</a></li>
-          <li><a ui-sref="about">About</a></li>
-          <li><a ui-sref="contact">Contact</a></li>
+          <li ng-class="{'active' : isTabActive('home')}"><a ui-sref="home">Home</a></li>
+          <li ng-class="{'active' : isTabActive('about')}"><a ui-sref="about">About</a></li>
+          <li ng-class="{'active' : isTabActive('contact')}"><a ui-sref="contact">Contact</a></li>
         </ul>
         <h3 class="text-muted">Timemail</h3>
       </div>
 
-      <div ui-view ng-controller="MainCtrl"></div>
+      <div ui-view></div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-envelope"></span> from the Timemail team</p>
+        <p>&copy;&nbsp;</span>Timemail <span>{{::getCopyrightYear()}}</span></p>
       </div>
     </div>
 

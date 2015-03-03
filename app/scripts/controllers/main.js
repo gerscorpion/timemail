@@ -8,11 +8,15 @@
  * Controller of the timemailApp
  */
 angular.module('timemailApp')
-  .controller('MainCtrl', function ($scope) {
-    console.log('ctrl ok');
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $state) {
+
+    $scope.isTabActive = function (path) {
+      var res = $state.current.name === path ? 'active' : '';
+      return res;
+    };
+
+    $scope.getCopyrightYear = function () {
+      return new Date().getFullYear();
+    };
+
   });
