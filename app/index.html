@@ -2,15 +2,9 @@
 <html class="no-js">
 
   <head>
-  <style type="text/css"><!--
-  body{
-    background-image:url(C:\xamp\htdocs\timemail\app\images/pic.png);
-    background-repeat:no-repeat;
-    background-position: 20px 40px;
-  }
---></style>
+    <link rel="shortcut icon" href="pic.png" type="image/png" />
     <meta charset="utf-8">
-    <title></title>
+    <title>Send a Timemail</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -28,14 +22,24 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Add your site or application content here -->
+     <style type="text/css"><!--
+  body{
+    background-image:url(images/hintergrundbild.png);
+    background-position: center;
+    background-size: 1000px 800px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;  
+
+  }
+--></style>
     <div class="container" ng-controller="MainCtrl">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li ng-class="{'active' : isTabActive('home')}"><a ui-sref="home">Home</a></li>
-          <li ng-class="{'active' : isTabActive('about')}"><a ui-sref="about">About</a></li>
-          <li ng-class="{'active' : isTabActive('contact')}"><a ui-sref="contact">Contact</a></li>
+          <li ng-class="{'active' : isTabActive('home')}"><a ui-sref="home"><font size="3" color="gold">Home</font></a></li>
+          <li ng-class="{'active' : isTabActive('about')}"><a ui-sref="about"><font size="3" color="gold">About</font></a></li>
+          <li ng-class="{'active' : isTabActive('contact')}"><a ui-sref="contact"><font size="3" color="gold">Contact</font></a></li>
         </ul>
-        <h3 class="text-muted">Timemail</h3>
+        <h3 class="text-muted"><font face="times new roman" size="6" color="gold"><i><b>Timemail</b></i></font></h3>
       </div>
 
       <div ui-view></div>
