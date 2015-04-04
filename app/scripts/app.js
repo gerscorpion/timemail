@@ -30,5 +30,6 @@ angular
 	      url: '/contact',
 	      templateUrl: 'views/contact.html'
 	    });
+	    
 
   });
