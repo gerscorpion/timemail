@@ -18,5 +18,6 @@ angular.module('timemailApp')
     $scope.getCopyrightYear = function () {
       return new Date().getFullYear();
     };
+    
 
   });

@@ -22,23 +22,19 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Add your site or application content here -->
-     
+    
     <div class="container" ng-controller="MainCtrl">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li ng-class="{'active' : isTabActive('home')}"><a ui-sref="home"><font size="5" color="gold">Home</font></a></li>
-          <li ng-class="{'active' : isTabActive('about')}"><a ui-sref="about"><font size="5" color="gold">About</font></a></li>
-          <li ng-class="{'active' : isTabActive('contact')}"><a ui-sref="contact"><font size="5" color="gold">Contact</font></a></li>
-        </ul>
-        <h3 class="text-muted"><font face="times new roman" size="8" color="gold"><i><b>Timemail</b></i></font></h3>
-      </div>
-      <img src="images/hintergrundbild.png" class="img-responsive" alt="Responsives Bild">
+          <li ng-class="{'active' : isTabActive('home')}"><a ui-sref="home" class="buttons">Home</a></li>
+          <li ng-class="{'active' : isTabActive('about')}"><a ui-sref="about" class="buttons">About</a></li>
+          <li ng-class="{'active' : isTabActive('contact')}"><a ui-sref="contact" class="buttons">Contact</a></li>
+          </ul>
+          <h3><div class="leftTop">Timemail</div></h3>
       <div ui-view></div>
-
       <div class="footer">
         <p>&copy;&nbsp;</span>Timemail <span>{{::getCopyrightYear()}}</span></p>
       </div>
-    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
