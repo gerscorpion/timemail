@@ -2,27 +2,45 @@
   <table id="white" class="table table-condensed" id="table">
   <h1><div class="pageHead">What do you have to fill in?</div></h1>
   <p><div class="pageText">Just tell us whom you want to send an mail and the date the receiver shall get it. Let`s start!</div></p>
-</div>
+<div ng-app="contactApp">
+<div ng-controller="ContactController" class="panel-body">
+<form ng-submit="submit(contactform)" name="contactform" method="post" action="" class="form-horizontal" role="form">
+                        <div align="left" class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+                             <label for="exampleInputName" class="formcontrolHead">Name</label>
+                            <div class="formcontrolHead">
+                                <input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name" required>
+                            </div>
+                        </div>
+                        <div align="left" class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+                            <label for="exampleInputEmail1" class="formcontrolHead">Receiver</label>
+                            <div class="formcontrolHead">
+                                <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Receiver`s Email" required>
+                            </div>
+                        </div>
+                        <div  align="left" class="form-group" ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
+                            <label for="inputSubject" class="formcontrolHead">Subject</label>
+                            <div class="formcontrolHead">
+                                <input ng-model="formData.inputSubject" type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message" required>
+                            </div>
+                        </div>
+                        <div align="left" class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+                            <label for="exampleInputMessage" class="formcontrolHead">Message</label>
+                            <div class="form-group">
+                                <textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
+                            </div>
+                        </div>
+                        <div align="left" class="form-group">
+                        <label for="exampleInputDate" class="formcontrolHead">Arrival date</label>
+                        <input type="date" class="form-control" id="arrivaldate" placeholder="date here">
+                        </div>
+                        <div align="left" class="form-group">
+                        <label for="exampleInputFile" class="formcontrolHead">File input</label>
+                        <input type="file" id="exampleInputFile">
+                        </div>
 
-
-<form>
-  <div align="left" class="form-group">
-    <label for="exampleInputEmail1" class="formcontrolHead">Receiver`s address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="enter email">
-  </div>
-  <div align="left" class="form-group">
-    <label for="exampleInputPassword1" class="formcontrolHead">Arrival date</label>
-    <input type="date" class="form-control" id="exampleInputPassword2" placeholder="date HIER">
-  </div>
-  <div align="left" class="form-group">
-    <label for="exampleInputPassword1" class="formcontrolHead">Message</label>
-    <textarea class="form-control" rows="5" placeholder="write your message here"></textarea>
-  </div>
-  <div align="left" class="form-group">
-    <label for="exampleInputFile" class="formcontrolHead">File input</label>
-    <input type="file" id="exampleInputFile">
-  </div>
-  <button type="submit" class="btn btn-primary" class="buttons">Send</button>
-</form>  
-
+                                <button type="submit" class="btn btn-primary" ng-disabled="submitButtonDisabled">Send Message
+                                </button>
+                
+               </form>     
+</div>    
 <br><br>

@@ -1,19 +1,24 @@
 <div class="jumbotron">
   <table id="white" class="table table-condensed" id="table">
   <h1><div class="pageHead">Do you have any questions?</div></h1>
-  <p><div class="pageText">Tell us everything you want to say about timemail.</div></p>
+  <p><div class="pageText">Tell us everything you want to say about Timemail.</div></p>
 </div>
-
-<form>
-  <div align="left" class="form-group">
-    <label for="exampleInputEmail1" class="formcontrolHead">Your address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="enter email">
-  </div>
-  <div align="left" class="form-group">
-    <label for="exampleInputPassword1" class="formcontrolHead">Message</label>
-    <textarea class="form-control" rows="5" placeholder="write your message here"></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary" class="buttons">Send</button>
+<div ng-app="contactApp">
+<div ng-controller="ContactController" class="panel-body">
+<form ng-submit="submit(contactform)" name="contactform" method="post" action="" class="form-horizontal" role="form">
+ <div align="left" class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+                            <label for="exampleInputEmail1" class="formcontrolHead">Email</label>
+                            <div class="formcontrolHead">
+                                <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                      <div align="left" class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+                            <label for="exampleInputMessage" class="formcontrolHead">Message</label>
+                            <div class="form-group">
+                                <textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
+                            </div>
+                        </div>
+  <button type="submit" class="btn btn-primary" ng-disabled="submitButtonDisabled">Send Message</button>
 </form> 
-
+</div>
 <br><br>

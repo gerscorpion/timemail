@@ -8,7 +8,7 @@
  * Controller of the timemailApp
  */
 angular.module('timemailApp')
-  .controller('MainCtrl', function ($scope, $state) {
+  .controller('MainCtrl', function ($scope, $state, $http) {
 
     $scope.isTabActive = function (path) {
       var res = $state.current.name === path ? 'active' : '';
