@@ -17,6 +17,10 @@
                                 <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Receiver`s Email" required>
                             </div>
                         </div>
+                        <div align="left" class="form-group">
+                        <label for="exampleInputDate" class="formcontrolHead">Arrival date</label>
+                        <input type="date" class="form-control" id="arrivaldate" placeholder="date here">
+                        </div>
                         <div  align="left" class="form-group" ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
                             <label for="inputSubject" class="formcontrolHead">Subject</label>
                             <div class="formcontrolHead">
@@ -28,10 +32,6 @@
                             <div class="form-group">
                                 <textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
                             </div>
-                        </div>
-                        <div align="left" class="form-group">
-                        <label for="exampleInputDate" class="formcontrolHead">Arrival date</label>
-                        <input type="date" class="form-control" id="arrivaldate" placeholder="date here">
                         </div>
                         <div align="left" class="form-group">
                         <label for="exampleInputFile" class="formcontrolHead">File input</label>

@@ -1,6 +1,4 @@
-var app = angular.module('contactApp', []);
-
-.controller('ContactController', function ($scope, $http) {
+app.controller('ContactController', function ($scope, $http) {
     $scope.result = 'hidden'
     $scope.resultMessage;
     $scope.formData; //formData is an object holding the name, email, subject, and message
@@ -29,7 +27,7 @@ var app = angular.module('contactApp', []);
             });
         } else {
             $scope.submitButtonDisabled = false;
-            $scope.resultMessage = 'Failed <img src="http://www.chaosm.net/blog/wp-includes/images/smilies/icon_sad.gif" alt=":(" class="wp-smiley">  Please fill out all the fields.';
+            $scope.resultMessage = 'Failed :( Please fill out all the fields.';
             $scope.result='bg-danger';
         }
     }
