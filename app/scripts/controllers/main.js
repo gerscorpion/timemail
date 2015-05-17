@@ -18,10 +18,14 @@ angular.module('timemailApp')
     $scope.getCopyrightYear = function () {
       return new Date().getFullYear();
     };
+
+   
+
+   console.log($.now());
     
 
   });
-angular.module('timemailApp')  
+/*angular.module('timemailApp')  
   .controller('ContactController', function ($scope, $http) {
     $scope.result = 'hidden'
     $scope.resultMessage;
@@ -55,4 +59,4 @@ angular.module('timemailApp')
             $scope.result='bg-danger';
         }
     }
-});
+});*/
