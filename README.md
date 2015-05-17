@@ -1,2 +1,0 @@
-# timemail
-Email Service
