@@ -3,16 +3,21 @@
   <h1><div class="pageHead">What do you have to fill in?</div></h1>
   <p><div class="pageText">Just tell us whom you want to send an mail and the date the receiver shall get it. Let`s start!</div></p>
 <div ng-app="timemailApp">
-<div class="panel-body">
-<form ng-submit="submit(contactform)" name="contactform" method="post" action="" class="form-horizontal" role="form">
-                        <div align="left" class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
-                             <label for="exampleInputName" class="formcontrolHead">Name</label>
+
+<form ng-submit="submit(contactform)" name="contactform" method="post" action="" class="formcontrolHead">
+                    
+
+
+                        <div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+                            <label for="exampleInputEmail1" class="formcontrolHead">Receiver</label>
                             <div class="formcontrolHead">
-                                <input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name" required>
+                                <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Receiver`s email" required>
                             </div>
                         </div>
-                        <div align="left" class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
-                             <label for="exampleInputName" class="formcontrolHead">Name test</label>
+
+
+                        <div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+                             <label for="exampleInputName" class="formcontrolHead">Arrival date</label>
                             <div class='input-group date' id='datetimepicker1'>
                                 <input type='text' class="form-control" />
                                 <span class="input-group-addon">
@@ -25,35 +30,31 @@
                                 });
                             </script>
                         </div>
-                        <div align="left" class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
-                            <label for="exampleInputEmail1" class="formcontrolHead">Receiver</label>
-                            <div class="formcontrolHead">
-                                <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Receiver`s Email" required>
-                            </div>
-                        </div>
-                        <div align="left" class="form-group">
-                        <label for="exampleInputDate" class="formcontrolHead">Arrival date</label>
-                        <input type="date" class="form-control" id="arrivaldate" placeholder="date here">
-                        </div>
-                        <div  align="left" class="form-group" ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
+
+
+                        <div class="form-group" ng-class="{ 'has-error': contactform.inputSubject.$invalid&& submitted }">
                             <label for="inputSubject" class="formcontrolHead">Subject</label>
                             <div class="formcontrolHead">
-                                <input ng-model="formData.inputSubject" type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message" required>
+                                <input ng-model="formData.inputSubject" type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Message subject" required>
                             </div>
                         </div>
-                        <div align="left" class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+
+
+                        <div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
                             <label for="exampleInputMessage" class="formcontrolHead">Message</label>
                             <div class="form-group">
-                                <textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
+                                <textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" required></textarea>
                             </div>
                         </div>
-                        <div align="left" class="form-group">
+
+
+                        <div class="form-group" align="middle">
                         <label for="exampleInputFile" class="formcontrolHead">File input</label>
                         <input type="file" id="exampleInputFile">
                         </div>
 
-                                <button type="submit" class="btn btn-primary" ng-disabled="submitButtonDisabled">Send Message
-                                </button>
+                        <button type="submit" class="btn btn-primary" ng-disabled="submitButtonDisabled"><div class="button">Send
+                        </button>
                 
                </form>     
 </div>    

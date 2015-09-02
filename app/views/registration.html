@@ -1,0 +1,35 @@
+<div class="jumbotron">
+<h1><div class="pageHead">Registration</div></h1><br>
+<div class="form-group">
+<form action="eintragen.php" method="post" class="formcontrolHead">
+
+Your email<br>
+<div class="input-group">
+  <input type="text" size="24" maxlength="50" class="form-control"  aria-describedby="basic-addon2">
+  <span class="input-group-addon" id="basic-addon2" name="username">@timemail.com</span>
+</div><br>
+
+First name<br>
+<input type="firstname" size="24" maxlength="50"
+name="firstname" class="form-control" placeholder="First name"><br><br>
+
+Surname
+<input type="surname" size="24" maxlength="50"
+name="surname" class="form-control" placeholder="Surname"><br><br>
+
+Your password<br>
+<input type="password" size="24" maxlength="50"
+name="passwort" class="form-control" placeholder="Password"><br><br>
+
+Repeat password<br>
+<input type="password" size="24" maxlength="50"
+name="passwort2" class="form-control" placeholder="Repeat password"><br><br>
+</div>
+</form>
+<ul class="nav nav-pills">
+
+<div class="container" ng-controller="MainCtrl">
+
+<div type="button" class="btn btn-primary">   
+<li ng-class="{'active' : isTabActive('submit')}"><a ui-sref="submit"><div class="button">Submit</div></a></li>
+</div>

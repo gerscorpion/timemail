@@ -14,7 +14,7 @@ angular
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 	  // For any unmatched url, redirect to /state1
-	  $urlRouterProvider.otherwise('/home');
+	  $urlRouterProvider.otherwise('/logout');
 	  //
 	  // Now set up the states
 	  $stateProvider
@@ -26,10 +26,30 @@ angular
 	      url: '/about',
 	      templateUrl: 'views/about.html'
 	    })
-	    .state('contact', {
+	    	    .state('contact', {
 	      url: '/contact',
 	      templateUrl: 'views/contact.html'
+	    })
+	    .state('profile', {
+	      url: '/profile',
+	      templateUrl: 'views/profile.html'
+	    })
+	     .state('logout', {
+	      url: '/logout',
+	      templateUrl: 'views/login.html'
+	    })
+	     .state('signup', {
+	      url: '/signup',
+	      templateUrl: 'views/registration.html'
+	    })
+	     .state('submit', {
+	      url: '/submit',
+	      templateUrl: 'views/main.html'
+	    })
+	      .state('overview', {
+	      url: '/overview',
+	      templateUrl: 'views/profile.html'
 	    });
-	    
 
-  });
+    });
+	    

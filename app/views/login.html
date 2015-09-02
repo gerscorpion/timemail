@@ -1,0 +1,22 @@
+<div class="jumbotron">
+<h1><div class="pageHead">Please enter your data</div></h1><br>
+<div class="form-group">
+<form action="eintragen.php"  method="post" class="formcontrolHead">
+
+Your email<br>
+<div class="input-group">
+  <input type="text" size="24" maxlength="50" class="form-control"  aria-describedby="basic-addon2">
+  <span class="input-group-addon" id="basic-addon2" name="username">@timemail.com</span>
+</div><br>
+
+ <div class="form-group">
+    <label for="beispielFeldPasswort1">Your password</label>
+    <input type="password" class="form-control" id="beispielFeldPasswort1">
+</div><br>
+<button type="submit" class="btn btn-primary" ng-disabled="submitButtonDisabled"><div class="button">Submit</button>
+</div>
+
+<hr style="width:500px;" >
+
+<div class="pageText">Not having an account yet?&nbsp;&nbsp;<button type="signup" ui-sref="signup" name="signup" class="btn btn-primary" ng-disabled="submitButtonDisabled"><div class="smallButton">Sign up!</button>
+</form>

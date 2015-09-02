@@ -2,7 +2,7 @@
 body {
   background-image: url("../images/hintergrundbild.png");
   background-position: center center;
-  background-size: 1900px 1200px;
+  background-size: 1920px 1080px;
   background-repeat: no-repeat;
   background-attachment:fixed;
 }
@@ -29,8 +29,8 @@ body {
 /* Custom page footer */
 .footer {
   padding-top: 19px;
-  color: #777;
   border-top: 1px solid #e5e5e5;
+  color: #ffd700;
 }
 
 /* Customize container */
@@ -61,7 +61,7 @@ body {
   margin-top: 28px;
 }
 
-/* Responsive: Portrait tablets and up */
+/* Responsive: Portrait tablets and up */s
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
   .header,
@@ -81,7 +81,9 @@ body {
 }
 
 .formcontrolHead{
-  color: blue;
+  color: blue;  
+  font-weight:bold;
+  font-size:18px;
 }
 .pageHead{
   font-size: 65px;
@@ -89,14 +91,29 @@ body {
   font-family: TimesNewRoman;   
 }
 .pageText{
-  font-size: 20px;
-  text-align:justify;
+  font-size: 18px;
+  text-align:middle;
+
 }
 
-.buttons{
+.smallpageText{
+  font-size: 15px;
+  text-align:middle;
+
+}
+
+.button{
   color: #ffd700;
   font-size: 20px;
+  text-align:middle;
 }
+
+.smallButton{
+  color: #ffd700;
+  font-size: 18px;
+  text-align:middle;
+}
+
 .leftTop{
   color: #ffd700;
   font-size: 50px;
@@ -104,3 +121,6 @@ body {
   font-family: TimesNewRoman;
   font-weight: 700;
 }
+.logout{
+  color: #ffd700;
+  font-size: 20px;

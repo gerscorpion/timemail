@@ -1,6 +1,7 @@
 <!doctype html>
-<html class="no-js">
 
+<html class="no-js">
+<br>
   <head>
     <link rel="shortcut icon" href="pic.png" type="image/png" />
     <meta charset="utf-8">
@@ -24,12 +25,27 @@
     <![endif]-->
     <!-- Add your site or application content here -->
     
+
+
+
     <div class="container" ng-controller="MainCtrl">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li ng-class="{'active' : isTabActive('home')}"><a ui-sref="home" class="buttons">Home</a></li>
-          <li ng-class="{'active' : isTabActive('about')}"><a ui-sref="about" class="buttons">About</a></li>
-          <li ng-class="{'active' : isTabActive('contact')}"><a ui-sref="contact" class="buttons">Contact</a></li>
+          <li ng-class="{'active' : isTabActive('home')}"><a ui-sref="home" class="button">Home</a></li>
+
+    <li role="presentation" class="button">
+    <a  data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" class="button">Profile
+    </a>
+    <ul class="dropdown-menu">
+     <li ng-class="{'active' : isTabActive('overview')}"><a ui-sref="overview" class="button">Overview</a></li>
+     <li ng-class="{'active' : isTabActive('post-office-box')}"><a ui-sref="post-office-box" class="button">Post office box</a></li>
+    </ul>
+    </li>
+
+
+          <li ng-class="{'active' : isTabActive('about')}"><a ui-sref="about" class="button">About</a></li>
+          <li ng-class="{'active' : isTabActive('contact')}"><a ui-sref="contact" class="button">Contact</a></li>
+          <li ng-class="{'active' : isTabActive('logout')}"><a ui-sref="logout" class="button">log out</a></li>
           </ul>
           <h3><div class="leftTop">Timemail</div></h3>
       <div ui-view></div>
